@@ -1,0 +1,15 @@
+#!/bin/sh
+
+rm /bin/dome9d
+rm /bin/dome9watchdog
+rm -r /etc/dome9
+rm -r /usr/syno/etc/packages/dome9
+rm /usr/sbin/dome9d
+rm /usr/sbin/dome9watchdog
+rm -r /usr/local/packages/@appstore/Python/usr/local/lib/python2.7/site-packages/dome9
+rm -r /usr/local/dome9d_init
+rm -r /usr/local/dome9d_cron
+rm /var/log/dome9d.log
+rm -r /var/lib/dome9
+
+exit 0

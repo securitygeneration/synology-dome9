@@ -1,0 +1,13 @@
+#!/bin/sh
+etxt=""
+TGT='/var/packages/Python/'
+if [ ! -e $TGT ]; then
+    etxt="${etxt}<BR>-Python package" 
+fi
+
+if [ ! "$etxt" = "" ]; then
+	etxt="The following packages has to be installed first:<BR>$etxt"
+	echo $etxt >  $SYNOPKG_TEMP_LOGFILE
+	exit 1
+fi
+exit 0

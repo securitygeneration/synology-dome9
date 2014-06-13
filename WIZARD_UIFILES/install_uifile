@@ -1,0 +1,10 @@
+[{ 
+ 	"step_title": "Enter Pairing Key", 
+ 	"items": [{ 
+ 		"type": "textfield", 
+	 	"desc": "Pairing Key", 
+	 	"subitems": [{ 
+	 		"key": "textfield1"
+		}]
+	}]
+}]

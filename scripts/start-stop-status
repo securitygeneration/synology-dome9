@@ -1,0 +1,28 @@
+#!/bin/sh
+
+case $1 in
+	start)
+		/sbin/insmod /lib/modules/iptable_mangle.ko
+		/sbin/insmod /lib/modules/ipt_LOG.ko
+		/bin/dome9d start > $SYNOPKG_TEMP_LOGFILE
+		if [ $? == 3 ]; then 
+			exit 3
+		fi
+		exit 0
+	;;
+	stop)
+		/bin/dome9d stop
+		exit 0
+	;;
+	status)
+		if [[ ! -f /var/run/dome9d.pid ]]; then
+			exit 3
+		fi
+		exit 0
+	;;
+	log)
+		echo "/var/log/dome9d.log";
+		exit 0
+	;;
+esac
+                                     
