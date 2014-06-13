@@ -18,7 +18,7 @@ http://www.securitygeneration.com - [@securitygen](https://twitter.com/securityg
 Synology Dome9 Package
 ===
 
-From: http://www.securitygeneration.com/general/dome9-package-for-synology-nas/
+From: http://www.securitygeneration.com/security/networking/dome9-package-for-synology-nas/
 
 This is a package for Synology NAS devices that installs the Dome9 Agent, allowing you to control the device's firewall using the Dome9 (http://dome9.com) service. You can then open some of your NAS' services to the internet, without worrying about leaving potentially vulnerable services exposed.
 
