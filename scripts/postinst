@@ -16,14 +16,14 @@ ret=`chown -R admin.users $SYNOPKG_PKGDEST`
 
 # Enable FORWARDING for OpenVPN
 BLANK=`grep "\-A FORWARD \-i tap+ \-j ACCEPT" /usr/local/packages/@appstore/Python/usr/local/lib/python2.7/site-packages/dome9/agent/iptables.boilerplate`
-if [ -z "$BLANK" ]; then\
-	/bin/sed -i '1i *nat\
-	-A POSTROUTING -o tun0 -j MASQUERADE\
-	-A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE\
-	COMMIT' /usr/local/packages/@appstore/Python/usr/local/lib/python2.7/site-packages/dome9/agent/iptables.boilerplate
+if [ -z "$BLANK" ]; then
+/bin/sed -i '1i *nat\
+-A POSTROUTING -o tun0 -j MASQUERADE\
+-A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE\
+COMMIT' /usr/local/packages/@appstore/Python/usr/local/lib/python2.7/site-packages/dome9/agent/iptables.boilerplate
 	
-	/bin/sed -i '/:BLACKLISTDROP -/a -A FORWARD -i tap+ -j ACCEPT\
-	-A FORWARD -i tun+ -j ACCEPT' /usr/local/packages/@appstore/Python/usr/local/lib/python2.7/site-packages/dome9/agent/iptables.boilerplate
+/bin/sed -i '/:BLACKLISTDROP -/a -A FORWARD -i tap+ -j ACCEPT\
+-A FORWARD -i tun+ -j ACCEPT' /usr/local/packages/@appstore/Python/usr/local/lib/python2.7/site-packages/dome9/agent/iptables.boilerplate
 fi	
 	
 # Run Dome9 and pair agent
