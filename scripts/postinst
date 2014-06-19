@@ -22,8 +22,9 @@ if [ -z "$BLANK" ]; then
 -A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE\
 COMMIT' /usr/local/packages/@appstore/Python/usr/local/lib/python2.7/site-packages/dome9/agent/iptables.boilerplate
 	
-/bin/sed -i '/:BLACKLISTDROP -/a -A FORWARD -i tap+ -j ACCEPT\
--A FORWARD -i tun+ -j ACCEPT' /usr/local/packages/@appstore/Python/usr/local/lib/python2.7/site-packages/dome9/agent/iptables.boilerplate
+/bin/sed -i '/:BLACKLISTDROP -/a -A FORWARD -i tun+ -j ACCEPT\
+-A FORWARD -i tun+ -o eth0 -m state --state RELATED,ESTABLISHED -j ACCEPT\
+-A FORWARD -i eth0 -o tun+ -m state --state RELATED,ESTABLISHED -j ACCEPT' /usr/local/packages/@appstore/Python/usr/local/lib/python2.7/site-packages/dome9/agent/iptables.boilerplate
 fi	
 	
 # Run Dome9 and pair agent
