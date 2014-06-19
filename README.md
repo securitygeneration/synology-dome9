@@ -26,7 +26,7 @@ This version of the package works with the NAS' OpenVPN service (using the defau
 
 To install this package, simply download the dome9.spk file and use the Manual Install option in the Package Center in DSM. You will need to have a Dome9 account and provide your pairing key to allow the agent to pair with the Dome9 service.
 
-Notes -
+###Notes -
 
 Dome9 will overwrite any iptables rules you may have set. If you want to manually add in rules, insert them into the iptables boilerplate file at:
 
@@ -37,6 +37,6 @@ If you haven't set any rules, then you don't have to worry about this.
 It is recommended to add ports TCP/22 (SSH) and TCP/5000 (Web Interface) to the Dome9 Emergency Policy Configuration, so that you retain the ability to connect to your NAS in the event it cannot communicate with the Dome9 service. You can also whitelist your LAN's subnet (ie. 192.168.0.0/24) to allow you to connect to your NAS without having to authenticate with Dome9.
 
 
-ChangeLog -
+###ChangeLog -
 0.1: Initial release (2014-06-13)
 
