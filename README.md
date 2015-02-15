@@ -24,7 +24,7 @@ This is a package for Synology NAS devices that installs the Dome9 Agent, allowi
 
 This version of the package works with the NAS' OpenVPN service (using the default subnet), but more work may be needed to make it work with PPTP or IPSec VPNs or custom subnets. If you use these and would like to use this package, please get in touch!
 
-To install this package, simply download the dome9.spk file and use the Manual Install option in the Package Center in DSM. You will need to have a Dome9 account and provide your pairing key to allow the agent to pair with the Dome9 service.
+To install this package, simply download the dome9.spk file and use the Manual Install option in the Package Center in DSM. You will need to have a Dome9 account and provide your pairing key to allow the agent to pair with the Dome9 service. As this package is unsigned, you may need to set the following: Package Center > Settings > General > Trust Level > Any Publisher (I think you can revert this after installing).
 
 ###Notes:
 
