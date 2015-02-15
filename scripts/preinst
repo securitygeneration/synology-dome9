@@ -1,6 +1,6 @@
 #!/bin/sh
 etxt=""
-TGT='/var/packages/Python/'
+TGT='/var/packages/PythonModule/'
 if [ ! -e $TGT ]; then
     etxt="${etxt}<BR>-Python package" 
 fi

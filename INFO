@@ -1,6 +1,6 @@
 package="dome9"
 displayname="Dome9 Agent"
-version="0.1"
+version="0.2"
 arch="noarch"
 description="This (unofficial) package installs the Dome9 Agent in order to allow you to control your Synology NAS firewall using the Dome9 service (http://dome9.com). Note: it is recommended to add ports TCP/22 (SSH) and TCP/5000 (Web Interface) to the Dome9 Emergency Policy Configuration, so that you retain the ability to connect to your NAS in the event it cannot communicate with the Dome9 service."
 distributor="Security Generation"

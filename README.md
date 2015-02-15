@@ -39,4 +39,4 @@ It is recommended to add ports TCP/22 (SSH) and TCP/5000 (Web Interface) to the 
 
 ###ChangeLog:
 0.1: Initial release (2014-06-13)
-
+0.2: Updated to support DSM 5.1 (2015-02-15)
